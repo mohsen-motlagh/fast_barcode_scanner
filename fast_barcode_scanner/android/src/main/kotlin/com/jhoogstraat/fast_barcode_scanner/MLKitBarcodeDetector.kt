@@ -5,15 +5,15 @@ import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
-import com.google.mlkit.vision.barcode.Barcode
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
+import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
 
 class MLKitBarcodeDetector(
-        options: BarcodeScannerOptions,
-        private val successListener: OnSuccessListener<List<Barcode>>,
-        private val failureListener: OnFailureListener
+    options: BarcodeScannerOptions,
+    private val successListener: OnSuccessListener<List<Barcode>>,
+    private val failureListener: OnFailureListener
 ) : ImageAnalysis.Analyzer {
     private val scanner = BarcodeScanning.getClient(options)
 

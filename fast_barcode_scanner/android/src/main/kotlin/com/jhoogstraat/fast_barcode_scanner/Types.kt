@@ -1,7 +1,7 @@
 package com.jhoogstraat.fast_barcode_scanner
 
 import android.util.Size
-import com.google.mlkit.vision.barcode.Barcode
+import com.google.mlkit.vision.barcode.common.Barcode
 
 enum class Framerate {
     fps30, fps60, fps120, fps240;
@@ -44,7 +44,7 @@ enum class CameraPosition {
     front, back;
 }
 
-val barcodeFormatMap = hashMapOf(
+val barcodeFormatMap =  hashMapOf(
         "aztec" to Barcode.FORMAT_AZTEC,
         "code128" to Barcode.FORMAT_CODE_128,
         "code39" to Barcode.FORMAT_CODE_39,
